@@ -1,4 +1,3 @@
-![Uploading WhatsApp Image 2025-09-21 at 17.43.04_c5727bd0.jpg…]()
 Our solution is a personalized AI career advisor that transforms student data into a dynamic Career Twin, which evolves as they learn and grow. This twin becomes the foundation for every step of their career journey.
 
 **Features**
