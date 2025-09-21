@@ -1,0 +1,17 @@
+const queryClient = new QueryClient()
+
+// P1 - Profile Management
+function ProfileSection({ userId }: { userId: string }) {
+  const { data: profile, isLoading, refetch } = useQuery({ 
+    queryKey: ['profile', userId], 
+    queryFn: () => fetch(/api/profile/).then(res => res.json())
+  })
+
+  const { data: atsData, isLoading: atsLoading, refetch: refetchAts } = useQuery({ 
+    queryKey: ['ats', userId], 
+    queryFn: () => fetch(/api/ats/score, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ userId, jd: 'Software Engineer with React, TypeScript, Node.js' })
+    }).then(res => res.json())
+  })
